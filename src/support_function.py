@@ -23,9 +23,9 @@ def rotateMatrixToAxisAndAngle(r):
             wz = math.sqrt((r[2][2] + 1) / 2)
         w = np.array([wx, wy, wz])
         return theta, w, -1 * w
-    w = np.array([[r[2][1] - r[1][2]],
-                  [r[0][2] - r[2][0]],
-                  [r[1][0] - r[0][1]]])
+    w = np.array([r[2][1] - r[1][2],
+                  r[0][2] - r[2][0],
+                  r[1][0] - r[0][1]])
     w = w/(2 * math.sin(theta))
     return theta, w, None
 

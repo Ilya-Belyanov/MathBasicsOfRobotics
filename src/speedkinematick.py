@@ -24,3 +24,5 @@ def jacobiAngle(frames, args: dict):
 def angleSpeed(frames, args: dict, delta: list):
     yak = jacobiAngle(frames, args)
     return np.dot(yak, np.array(delta).T).T
+
+
