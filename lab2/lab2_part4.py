@@ -1,8 +1,8 @@
 import math
 
 import numpy as np
-from src.support_function import quatSlerp
 from src.quaternion import Quaternion
+from src.quaternionfunctions import quatSlerp
 
 import matplotlib.pyplot as plt
 from matplotlib.ticker import AutoMinorLocator
