@@ -3,7 +3,6 @@ import math
 import numpy as np
 import sympy as sy
 from src.support_function import templateDevidChart
-from src.printers import printNumpyMatrix
 
 
 def coords(link):
@@ -44,4 +43,4 @@ if __name__ == '__main__':
         print(p)
 
     print("R rotate")
-    printNumpyMatrix(R)
+    print(np.array(R, 2))

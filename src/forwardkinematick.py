@@ -1,4 +1,5 @@
 import sympy as sy
+
 from src.support_function import templateDevidChart
 
 
@@ -11,10 +12,7 @@ def rotateFromTransform(link: sy.Matrix) -> sy.Matrix:
 
 
 def transformMatrices(d: list, r: list, thetas: list, alpha: list) -> list:
-    links = list()
-    for i in range(len(d)):
-        links.append(templateDevidChart(r[i], alpha[i], d[i], thetas[i]))
-    return links
+    return [templateDevidChart(r[i], alpha[i], d[i], thetas[i]) for i in range(len(d))]
 
 
 def fkFrames(links: list) -> list:

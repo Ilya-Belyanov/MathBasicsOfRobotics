@@ -5,7 +5,6 @@ import numpy as np
 import sympy as sy
 from lab4.part1 import posAndRotate
 from lab4.part2 import getParameters
-from src.printers import printNumpyMatrix
 
 th1Parameters = [0, math.pi]
 th3Parameters = [0, math.pi/2]
@@ -26,9 +25,9 @@ class Test(unittest.TestCase):
             print(f"TEST {i} with theta1 = {th1Param} and theta3 = {th3Param} and d2 = {d2Param}")
             print(f"IK: theta1 = {theta1} and theta3 = {theta3} and d2 = {d2}")
             print(f"Pos x = {round(pos[-1][0], 2)}, y = {round(pos[-1][1], 2)}, z = {round(pos[-1][2], 2)}")
-            printNumpyMatrix(R)
+            print(np.round(R, 2))
             print(f"Pos_IK x = {round(pos_ik[-1][0], 2)}, y = {round(pos_ik[-1][1], 2)}, z = {round(pos_ik[-1][2], 2)}")
-            printNumpyMatrix(R_ik)
+            print(np.round(R_ik, 2))
             print()
 
             self.assertEqual(round(pos[-1][0], 2), round(pos_ik[-1][0], 2))
