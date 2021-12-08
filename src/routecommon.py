@@ -63,8 +63,8 @@ def startAndEntToMap(input_map, start_coords, dest_coords):
     return map_with_start_end
 
 
-def routeToMap(input_map, route):
+def routeToMap(input_map, route, color=7):
     map_with_all = copy.deepcopy(input_map)
     for r in range(1, len(route) - 1):
-        input_map[route[r][0]][route[r][1]] = 7
+        input_map[route[r][0]][route[r][1]] = color
     return map_with_all

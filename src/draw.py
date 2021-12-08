@@ -1,11 +1,13 @@
 import matplotlib.pyplot as plt
 
+COLOR_BUFFER = ['r', 'g', 'blue', 'black']
+
 
 def drawTriangles(*triangles):
-    for triangles in triangles:
-        for edge in triangles .edges():
-            plt.plot([edge[0].coord()[0], edge[1].coord()[0]],
-                     [edge[0].coord()[1], edge[1].coord()[1]],
-                     marker='o')
+    for i, triangles in enumerate(triangles):
+        for edge in triangles.edges():
+            plt.plot([edge[0].x, edge[1].x],
+                     [edge[0].y, edge[1].y],
+                     marker='o', color=COLOR_BUFFER[i % len(COLOR_BUFFER)])
 
     plt.show()
