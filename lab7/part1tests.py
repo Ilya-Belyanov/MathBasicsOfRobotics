@@ -1,7 +1,7 @@
 import unittest
 
-from src.trianglealg import *
-from src.draw import drawTriangles
+from robobase.trianglealg import *
+from src.support import drawTriangles
 
 
 class TestTriangleIntersections(unittest.TestCase):

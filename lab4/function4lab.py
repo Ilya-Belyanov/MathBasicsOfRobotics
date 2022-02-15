@@ -3,8 +3,8 @@ import math
 import numpy as np
 
 from src.forwardkinematics import ForwardKinematics
-from src.dhmatrix import DHMatrix
-from src.converters import toNumpy
+from robobase.dhmatrix import DHMatrix
+from src.support import toNumpy
 
 
 def positionsAndRotate(d: list, r: list, thetas: list, alpha: list, arg:dict):
